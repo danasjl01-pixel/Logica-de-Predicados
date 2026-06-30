@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de la Lógica de Predicados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .hero { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+    .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card:hover { transform: translateY(-12px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15); }
+    .formula { font-family: monospace; background: #f1f5f9; padding: 14px 18px; border-radius: 10px; border-left: 5px solid #1e40af; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- HERO -->
+  <header class="hero text-white py-28 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Fundamentos de la Lógica de Predicados</h1>
+      <p class="text-2xl md:text-3xl">Aplicados a Sistemas de Ciberseguridad Bancaria</p>
+      <p class="mt-6 text-lg max-w-2xl mx-auto">Proyecto académico que integra teoría lógica con una aplicación real en informática</p>
+    </div>
+  </header>
+
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-sm font-medium">
+      <a href="#" class="font-bold text-xl">Lógica de Predicados</a>
+      <div class="flex gap-8">
+        <a href="#introduccion" class="hover:text-blue-600">Inicio</a>
+        <a href="#teoria" class="hover:text-blue-600">Teoría</a>
+        <a href="#tecnologia" class="hover:text-blue-600">Tecnología</a>
+        <a href="#expresiones" class="hover:text-blue-600">Expresiones</a>
+        <a href="#conclusiones" class="hover:text-blue-600">Conclusiones</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- 1. TÍTULO + 2. INTRODUCCIÓN -->
+    <section id="introduccion" class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-10">1. Título del Proyecto</h2>
+      <p class="text-center text-3xl font-semibold text-blue-800">"Los Fundamentos de la Lógica de Predicados y su Aplicación en Sistemas Bancarios Seguros"</p>
+      
+      <div class="mt-16 max-w-3xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6">2. Introducción</h3>
+        <p class="text-lg leading-relaxed">
+          Este proyecto investiga los fundamentos de la Lógica de Predicados (Fase I) y los aplica a un sistema real de ciberseguridad en banca en línea (Fase II). 
+          Se desarrolla la modelación lógica (Fase III), construcción de expresiones y negaciones (Fase IV), con el fin de demostrar la utilidad práctica de la lógica formal en informática.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. CONCEPTOS FUNDAMENTALES -->
+    <section id="teoria" class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-10">3. Conceptos Fundamentales Investigados</h2>
+      <div class="grid md:grid-cols-2 gap-8 fade-in">
+        <div class="card bg-white p-8 rounded-2xl shadow">
+          <ul class="space-y-4 text-lg">
+            <li><strong>Proposición y Predicado</strong></li>
+            <li><strong>Variable y Constante</strong></li>
+            <li><strong>Dominio de Discurso</strong></li>
+            <li><strong>Cuantificadores ∀ y ∃</strong></li>
+            <li><strong>Variables Libres y Ligadas</strong></li>
+            <li><strong>Traducción Simbólica</strong></li>
+            <li><strong>Negación de Expresiones Cuantificadas</strong></li>
+          </ul>
+        </div>
+        <div class="card bg-white p-8 rounded-2xl shadow">
+          <p class="italic">"La lógica de predicados permite expresar relaciones y cuantificaciones con precisión, esencial para verificar sistemas informáticos."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TECNOLOGÍA -->
+    <section id="tecnologia" class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-10">4. Descripción de la Tecnología Seleccionada</h2>
+      <div class="bg-blue-50 p-12 rounded-3xl">
+        <h3 class="text-3xl font-bold mb-4">Sistemas Bancarios en Línea (Ciberseguridad)</h3>
+        <p class="text-lg">Plataformas que gestionan autenticación, control de acceso, MFA y detección de transacciones fraudulentas. La lógica formal ayuda a definir y verificar reglas de seguridad de manera precisa.</p>
+      </div>
+    </section>
+
+    <!-- 5. DOMINIO Y PREDICADOS -->
+    <section class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-10">5. Dominio, Predicados, Constantes y Variables</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card bg-white p-8 rounded-2xl shadow">
+          <strong>Dominio:</strong> Usuarios, transacciones, sesiones y recursos del sistema bancario.
+        </div>
+        <div class="card bg-white p-8 rounded-2xl shadow">
+          <strong>Predicados:</strong> Autenticado(u), TieneAcceso(u,r), TransaccionSospechosa(t), VerificadoMFA(u), Propietario(u,c)
+        </div>
+        <div class="card bg-white p-8 rounded-2xl shadow">
+          <strong>Constantes:</strong> u₁ (usuario específico), t₁ (transacción), r₁ (recurso "saldo")
+        </div>
+      </div>
+    </section>
+
+    <!-- 6,7,8 EXPRESIONES -->
+    <section id="expresiones" class="mb-20">
+      <h2 class="text-4xl font-bold text-center mb-12">6-8. Expresiones Lógicas y Negaciones</h2>
+      
+      <div class="space-y-16">
+        <div>
+          <h3 class="text-2xl font-bold text-green-700 mb-6">6. Cinco expresiones con ∀</h3>
+          <div class="space-y-4">
+            <div class="formula">∀u (Autenticado(u) → TieneAcceso(u, r1))</div>
+            <div class="formula">∀u (VerificadoMFA(u) → Seguro(u))</div>
+            <div class="formula">∀t (Procesada(t) → Registrada(t))</div>
+            <div class="formula">∀u (Propietario(u, c) ∧ TransaccionSospechosa(t) → RequiereAprobacion(u, t))</div>
+            <div class="formula">∀u (UsuarioActivo(u) → CumplePoliticas(u))</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-purple-700 mb-6">7. Cinco expresiones con ∃</h3>
+          <div class="space-y-4">
+            <div class="formula">∃u (Autenticado(u) ∧ TieneAcceso(u, r_confidencial))</div>
+            <div class="formula">∃t (TransaccionSospechosa(t) ∧ Bloqueada(t))</div>
+            <div class="formula">∃u (Propietario(u, c) ∧ VerificadoMFA(u))</div>
+            <div class="formula">∃u (IntentoAccesoNoAutorizado(u) ∧ Detectado(u))</div>
+            <div class="formula">∃t (Procesada(t) ∧ AnomaliaDetectada(t))</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-red-700 mb-6">8. Cinco negaciones correctamente desarrolladas</h3>
+          <div class="space-y-4">
+            <div class="formula">¬∀u (Autenticado(u) → TieneAcceso(u,r)) ≡ ∃u (Autenticado(u) ∧ ¬TieneAcceso(u,r))</div>
+            <div class="formula">¬∀u (VerificadoMFA(u) → Seguro(u)) ≡ ∃u (VerificadoMFA(u) ∧ ¬Seguro(u))</div>
+            <div class="formula">¬∃t (Sospechosa(t) ∧ Bloqueada(t)) ≡ ∀t (¬Sospechosa(t) ∨ ¬Bloqueada(t))</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 y 10 -->
+    <section id="conclusiones" class="grid md:grid-cols-2 gap-12">
+      <div class="card bg-white p-10 rounded-3xl shadow">
+        <h3 class="text-3xl font-bold mb-6">9. Aplicación de la Lógica en Informática</h3>
+        <p>Verificación formal de software, control de acceso (RBAC/ABAC), bases de datos, inteligencia artificial y ciberseguridad.</p>
+      </div>
+      <div class="card bg-white p-10 rounded-3xl shadow">
+        <h3 class="text-3xl font-bold mb-6">10. Conclusiones</h3>
+        <p>La Lógica de Predicados proporciona rigor matemático para modelar y verificar sistemas complejos, mejorando la seguridad y confiabilidad de las aplicaciones informáticas reales.</p>
+      </div>
+    </section>
+
+    <!-- Nombres + Referencias -->
+    <div class="mt-20 text-center">
+      <p class="font-semibold text-xl mb-4">Integrantes:</p>
+      <p class="mb-12">[Nombre del Integrante 1] • [Nombre del Integrante 2] • [Nombre del Integrante 3]</p>
+
+      <button onclick="showReferences()" class="bg-blue-700 hover:bg-blue-800 text-white px-10 py-4 rounded-full text-lg font-medium">
+        Ver Referencias APA (5)
+      </button>
+    </div>
+  </main>
+
+  <script>
+    // Animaciones
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          el.classList.add('visible');
+        }
+      });
+    });
+
+    function showReferences() {
+      alert(`Referencias APA (ejemplo):\n\n1. Huth, M., & Ryan, M. (2004). Logic in Computer Science. Cambridge University Press.\n2. Russell, S., & Norvig, P. (2016). Artificial Intelligence: A Modern Approach. Pearson.\n3. SentinelOne. (2025). Control de Acceso.\n4. MoraCoCR. (2025). Lógica de Predicados.\n5. IBM. (2025). IA en el Sector Bancario.`);
+      // Puedes reemplazar el alert por un modal más elaborado si deseas
+    }
+  </script>
+</body>
+</html>
